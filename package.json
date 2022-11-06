@@ -1,0 +1,29 @@
+{
+    "scripts": {
+        "server": "node server/index.js",
+        "client": "cd client && npm run start",
+        "build:client": "cd client && npm run build",
+        "iall": "npm i && cd client && npm i",
+        "startboth": "npm run server & npm run client"
+    },
+    "dependencies": {
+        "@draft-js-plugins/editor": "^4.1.3",
+        "axios": "^0.27.2",
+        "draft-js": "^0.11.7",
+        "draft-js-single-line-plugin": "^2.0.5",
+        "express": "^4.18.1",
+        "gapi-script": "^1.2.0",
+        "google-auth-library": "^8.5.2",
+        "react": "^18.2.0",
+        "react-contenteditable": "^3.3.6",
+        "react-controlled-contenteditable": "^0.19.3",
+        "react-dom": "^18.2.0",
+        "react-merge-refs": "^2.0.1",
+        "use-debounce": "^8.0.4"
+    },
+    "browser": {
+        "fs": false,
+        "path": false,
+        "os": false
+    }
+}
