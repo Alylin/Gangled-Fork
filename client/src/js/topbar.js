@@ -17,13 +17,13 @@ function StyledLink(props) {
 
     return (
         <Link 
-            className={classNames('inline-block relative max-w-sm cursor-pointer select-none font-semibold font-title rounded-full h-10 w-10 px-1 pb-0.5', extraClasses)} 
+            className={classNames('hover:bg-hover/70 mx-2 inline-block relative max-w-sm cursor-pointer select-none font-semibold font-title rounded-full h-10 w-10 px-1 pb-0.5', extraClasses)} 
             title={displayName} 
             tabIndex={0}
             to={url}
             name={displayName}
         >
-            <span className={classNames('inline-block align-middle overflow-hidden overflow-ellipsis m-auto')}>
+            <span className={classNames('h-full inline-block align-middle overflow-hidden overflow-ellipsis m-auto')}>
                 {children}
             </span>
         </Link>
@@ -39,7 +39,6 @@ const TopBar = ({ isGlassy }) => {
                 <StyledLink 
                     displayName={messages.home()} 
                     isCircle={true} 
-                    extraClasses="hover:bg-hover/70 mx-2"
                     url="/"
                 >
                     <CompanyIcon />
@@ -52,7 +51,7 @@ const TopBar = ({ isGlassy }) => {
                 <StyledLink 
                     displayName={messages.settings()} // test108 this fucking sucks and won't position icons right
                     isCircle={true} 
-                    extraClasses={`hover:bg-hover/70 mx-2 ${location.pathname === '/settings' && 'shadow-indentstronger bg-base'}`}
+                    extraClasses={`${location.pathname === '/settings' && 'shadow-indentstronger bg-base'}`}
                     url="/settings"
                 >
                     <span className="absolute left-2 top-2">
@@ -62,7 +61,7 @@ const TopBar = ({ isGlassy }) => {
                 <StyledLink 
                     displayName={messages.profile()} 
                     isCircle={true} 
-                    extraClasses={`hover:bg-hover/70 mx-2 ${location.pathname === '/profile' && 'shadow-indentstronger bg-base'}`}
+                    extraClasses={`${location.pathname === '/profile' && 'shadow-indentstronger bg-base'}`}
                     url="/profile"
                 >
                     <span className="absolute left-2 top-2">

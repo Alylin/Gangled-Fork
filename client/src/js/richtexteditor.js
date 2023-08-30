@@ -1,13 +1,7 @@
 import Editor from '@draft-js-plugins/editor';
-import { EditorState } from 'draft-js';
-import React, { useState } from 'react';
 import 'draft-js/dist/Draft.css';
 
-export default function RichTextEditor({readOnly}) {
-    const [editorState, setEditorState] = useState(() =>
-        EditorState.createEmpty(),
-    );
-
+export default function RichTextEditor({readOnly, editorState, setEditorState}) {
     return (
         <Editor  
             editorState={editorState}

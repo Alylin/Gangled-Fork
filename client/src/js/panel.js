@@ -41,7 +41,8 @@ function Panel(props) {
         displayName,
         description, 
         imagePath,
-        isLoading
+        isLoading,
+        id
     } = props;
 
     if (isLoading) {
@@ -61,7 +62,7 @@ function Panel(props) {
     }
 
     return (
-        <div className="lg:inline-block lg:h-52 lg:w-48 lg:min-w-48 w-full block h-24 rounded-lg shadow-md cursor-pointer relative overflow-hidden" tabIndex="0">
+        <a className="lg:inline-block lg:h-52 lg:w-48 lg:min-w-48 w-full block h-24 rounded-lg shadow-md cursor-pointer relative overflow-hidden" tabIndex="0" href={`/object/${id}`}>
             <div className="bg-opacity-50 rounded-lg h-full w-full bg-black z-10 absolute p-2 hover:bg-opacity-60">
                 <div className="font-medium text-white pb-2 overflow-hidden overflow-ellipsis" title={displayName}>
                     {displayName}
@@ -73,7 +74,7 @@ function Panel(props) {
             <div className="bg-green-800 h-full w-full inline-block rounded-lg" style={{
                 background: `center / cover no-repeat url(${imagePath})`
             }} />
-        </div>
+        </a>
     );
 }
 

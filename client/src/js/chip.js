@@ -1,6 +1,6 @@
 import { MdClose } from 'react-icons/md';
 import classNames from 'classnames';
-import { EditorState } from 'draft-js';
+import { EditorState, ContentState } from 'draft-js';
 import React, { useEffect, useState } from 'react';
 import createSingleLinePlugin from 'draft-js-single-line-plugin'
 import Editor from '@draft-js-plugins/editor';
@@ -37,12 +37,8 @@ export function EditableChip({
     onChange
 }) {
     const [editorState, setEditorState] = useState(() =>
-        EditorState.createEmpty(),
+        EditorState.createWithContent(ContentState.createFromText(text)),
     );
-
-    useEffect(() => {
-        setEditorState(EditorState.moveFocusToEnd(editorState));
-    }, []);
 
     const singleLinePlugin = createSingleLinePlugin();
     return (

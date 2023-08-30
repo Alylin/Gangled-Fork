@@ -208,15 +208,15 @@ function SearchBar(props) {
                             )
                         })}
                     </div>
-                    <div className='mr-2 mb-2'>
+                    <div>
                         {!searchResults.length && <NoResults />}
                         {searchResults.map((result) => {
                             return (
-                                <div className="h-16 rounded-lg shadow-sm cursor-pointer relative overflow-hidden w-full p-2 flex transition-all hover:bg-tertiary group" tabIndex="0">
-                                     <div className="bg-green-800 h-12 w-12 shrink-0 inline-block rounded-lg mr-2 group-hover:w-20 transition-all" style={{
+                                <a className="h-16 rounded-lg shadow-sm cursor-pointer relative overflow-hidden w-full p-2 flex transition-all hover:bg-tertiary group" tabIndex="0" href={`/object/${result.id}`}>
+                                     <div className="bg-green-800 h-12 w-12 shrink-0 inline-block rounded-lg group-hover:w-20 transition-all" style={{
                                         background: `center / cover no-repeat url(${result.imagePath})`
                                     }} />
-                                    <div className="flex-1">
+                                    <div className="flex-1 ml-2">
                                         <div className="font-medium text-primary overflow-hidden overflow-ellipsis">
                                             {result.displayName}
                                         </div>
@@ -224,7 +224,7 @@ function SearchBar(props) {
                                             {result.description}
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             );
                         })}
                     </div>

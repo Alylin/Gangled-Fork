@@ -44,6 +44,9 @@ module.exports = {
                 '100%': {
                     opacity: 1
                 }
+            },
+            fadingColors: {
+
             }
         },
         animation: {
@@ -53,7 +56,8 @@ module.exports = {
         },
         boxShadow: {
             'indent': 'var(--indent)',
-            'indentstronger': 'var(--indentstronger)'
+            'indentstronger': 'var(--indentstronger)',
+            'main': 'var(--mainShadow)'
         },
         fontFamily: {
             title: ['archivo', 'sans-serif'],

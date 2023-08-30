@@ -63,7 +63,7 @@ function SearchableList(props) {
                 {searchResults.map((result) => {
                     return (
                         <span className="snap-start p-1">
-                            <Panel isLoading={false} displayName={result.displayName} description={result.description} imagePath={result.imagePath} />
+                            <Panel isLoading={false} displayName={result.displayName} description={result.description} imagePath={result.imagePath} id={result.id} />
                         </span>
                     );
                 })}

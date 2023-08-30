@@ -63,10 +63,16 @@ function Primary() {
                                 </>)} 
                             />
                             <Route 
-                                path="/editobject"
+                                path="/object/:objectId"
                                 element={(<>
                                     <TopBar isGlassy={true} />
                                     <EditObjectPage />
+                                </>)} 
+                            />
+                            <Route 
+                                path="/object/:objectId/micro"
+                                element={(<>
+                                    <EditObjectPage isMicro={true} />
                                 </>)} 
                             />
                         </Routes>

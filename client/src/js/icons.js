@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { MdUpcoming, MdDashboard, MdKeyboardArrowLeft, MdKeyboardArrowRight, MdFullscreen, MdFullscreenExit, MdHelpOutline } from 'react-icons/md';
+import { MdUpcoming, MdDashboard, MdKeyboardArrowLeft, MdKeyboardArrowRight, MdFullscreen, MdFullscreenExit, MdHelpOutline, MdPlayArrow, MdMoreHoriz, MdPause } from 'react-icons/md';
 
 export function CompanyIcon() {
     return (
@@ -142,5 +142,23 @@ export function FullScreenExitIcon(props) {
 export function HelpIcon(props) {
     return (
         <MdHelpOutline className="w-8 h-8 fill-primary" />
+    );
+}
+
+export function PlayIcon(props) {
+    return (
+        <MdPlayArrow className="w-8 h-8 fill-primary" />
+    );
+}
+
+export function PauseIcon(props) {
+    return (
+        <MdPause className="w-8 h-8 fill-primary" />
+    );
+}
+
+export function More(props) {
+    return (
+        <MdMoreHoriz className="w-6 h-6 fill-primary" />
     );
 }
